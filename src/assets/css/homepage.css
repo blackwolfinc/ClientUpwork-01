@@ -1,0 +1,136 @@
+.homepage {
+  width: 100vw;
+  height: 100%;
+  background: url("../img/BackgroundWhite.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding-top: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+.sectionTop,
+.sectionBottom {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 3rem;
+  flex-direction: row;
+}
+
+.sectionBottom .overview {
+  background-color: #eeeeee;
+  width: 50%;
+  height: 30rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.details {
+  background-color: #eeeeee;
+  width: 50%;
+  height: 18rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.detailData {
+  margin-top: 2rem;
+}
+
+/* Controls Css */
+.controls {
+  background-color: whitesmoke;
+  width: 40%;
+  height: 18rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.buttonWarp {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  margin-top: 1rem !important;
+  justify-content: space-between;
+}
+
+.buttonControls {
+  width: 50%;
+  margin: 1.5rem 1rem;
+  padding: 0rem 0rem;
+  border: 2px solid;
+  height: 3rem;
+  border-color: #4a4a4a20;
+  border-radius: 4px;
+  color: #00000082;
+}
+
+.buttonControlsSubmit {
+  width: 95%;
+
+  margin: -1rem 1rem 1rem 1rem;
+  padding: 1rem 0rem;
+  border: 2px solid;
+  border-color: #4a4a4a20;
+  border-radius: 4px;
+  color: #00000082;
+}
+
+.buttonControls:hover {
+  transform: scale(1.03);
+  transition: all 600ms;
+}
+
+/* Controls End */
+.headLine {
+  background-color: #d6d6d6;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 12rem;
+  padding: 10px 1rem !important;
+  border-radius: 4px;
+  margin-left: -1.5rem;
+}
+
+.headLine h1,
+p {
+  padding: 10px !important;
+  margin: 0rem 0rem 0rem 2rem;
+  color: #00000082;
+}
+
+.headLine p {
+  margin-top: 1rem;
+}
+
+/* Overview  */
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+}
+
+.overview h1 {
+  margin-left: 2rem;
+  color: #00000082;
+}
+
+.overview .contentOverview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dataOverview {
+  background: #ffff;
+  margin: 1rem;
+  padding: 4.7rem;
+  border-radius: 10px;
+  box-shadow: 0px 3.4646px 3.4646px rgba(0, 0, 0, 0.25);
+  color: #282828;
+}
