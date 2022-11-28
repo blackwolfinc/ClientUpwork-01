@@ -1,5 +1,12 @@
+import axios from "axios";
+
 export const getDataPlayer = async () => {
-  await fetch("../assets/json/player.json")
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+  return await axios
+    .get("./player.json")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
