@@ -14,7 +14,7 @@ export const Homepage = () => {
   // Variable
   const [DataPlayer, setDataPlayer] = React.useState([]);
   const [DataPlayerSelected, setDataPlayerSelected] = React.useState<Data>();
-  const [Filter, setFilter] = React.useState(true);
+  const [Filter, setFilter] = React.useState<boolean>(true);
 
   // Function for asynchronously
   const getDataFormApi = async () => {
@@ -56,8 +56,8 @@ export const Homepage = () => {
       return (
         <div
           className=" bg-[#ffffff] tag  m-[1rem] w-[8rem] md:w-3/12 p-[1rem]  
-           min-h-[9rem] justify-center items-start flex flex-col rounded-md shadow-2xl text-[#282828]  
-           hover:scale-[1.05] hover:cursor-pointer duration-200å"
+           min-h-[9rem] justify-center items-start flex flex-col rounded-md shadow-2xl text-[#00000082]  
+           hover:scale-[1.05] hover:cursor-pointer duration-200"
           key={i}
           onClick={() => {
             // Set Data Player Active
@@ -85,13 +85,13 @@ export const Homepage = () => {
 
   return (
     <div className="homepage flex justify-center items-center w-full h-full min-h-screen">
-      <section className="flex  flex-col md:p-0   md:flex-row w-full justify-around ">
+      <section className="flex  flex-col md:p-0   md:flex-row w-full justify-around  ">
         {/* Details Section */}
-        <div className=" bg-[#eeeeee]  m-[1rem]   md:w-7/12  m-3 md:m-0    p-6 rounded-md md:min-h-[20rem]">
-          <div className="bg-[#d6d6d6] max-w-[12rem] p-[1rem] rounded-md ml-[-1.8rem] md:mt-[1rem] mb-2">
+        <div className=" bg-[#eeeeee]/40  m-[1rem]   md:w-7/12  m-3 md:m-0  shadow-xl   p-6 rounded-md md:min-h-[20rem]">
+          <div className="bg-gradient-to-r from-gray-100 to-[#ffffff] max-w-[12rem] p-[1rem] rounded-md ml-[-1.8rem] md:mt-[1rem] shadow-md mb-2">
             <h1
               id="detailsHeader"
-              className="text-lg md:text-2xl text-[#00000082]"
+              className="text-lg md:text-2xl text-[#00000082] "
             >
               Details
             </h1>
@@ -112,8 +112,8 @@ export const Homepage = () => {
         </div>
 
         {/* Filter Section  */}
-        <div className="flex flex-col p-6 md:bg-[#eeeeee] w-full h-full   md:w-4/12 rounded-md min-h-[20rem]">
-          <div className="md:bg-[#d6d6d6] text-center w-full md:max-w-[12rem] p-[1rem] rounded-md md:ml-[-1.8rem] mt-[1rem] mb-[-2rem] md:mb-2">
+        <div className="flex flex-col p-6 md:bg-[#eeeeee]/40 w-full h-full   md:w-4/12 rounded-md min-h-[20rem] shadow-xl">
+          <div className="md:bg-gradient-to-r md:from-gray-100 md:to-[#ffffff]  text-center w-full md:max-w-[12rem] md:shadow-md p-[1rem] rounded-md md:ml-[-1.8rem] mt-[1rem] mb-[-2rem] md:mb-2">
             <h1
               id="controlHeader"
               className="text-lg md:text-2xl  text-[#00000082]"
@@ -129,7 +129,7 @@ export const Homepage = () => {
                 // set Filter ASC true
                 setFilter(true);
               }}
-              className="bg-[#EEEEEE] border-[#4A4A4A]/40 border-[2px] text-md  w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
+              className="bg-[#ffffff] border-[#4A4A4A]/40 border-[2px] text-md  w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
             >
               SORT ASC
             </button>
@@ -139,7 +139,7 @@ export const Homepage = () => {
                 // set Filter ASC true
                 setFilter(false);
               }}
-              className="bg-[#EEEEEE] border-[#4A4A4A]/40 border-[2px] text-md    w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
+              className="bg-[#ffffff] border-[#4A4A4A]/40 border-[2px] text-md     w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
             >
               SORT DESC
             </button>
@@ -149,7 +149,7 @@ export const Homepage = () => {
               // handle when submit
               handleSubmit();
             }}
-            className="bg-[#EEEEEE] border-[#4A4A4A]/40 border-[2px] text-[#00000082]  w-full py-2 px-10 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
+            className="bg-[#ffffff] border-[#4A4A4A]/40 border-[2px] text-[#00000082]  w-full py-2 px-10 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
           >
             SUBMIT
           </button>
@@ -157,11 +157,11 @@ export const Homepage = () => {
       </section>
 
       {/* Overview Section  */}
-      <section className="flex bg-[#eeeeee] mb-[3rem]  md:w-7/12 md:ml-[2vw] self-start justify-between rounded-md p-6 md:mt-[3rem]">
+      <section className="flex bg-[#eeeeee]/40 mb-[3rem]  md:w-7/12 md:ml-[2vw] self-start justify-between shadow-xl rounded-md p-6 md:mt-[3rem]">
         <div className="overview">
           <h1
             id="overviewHeader"
-            className="text-lg md:text-2xl  text-[#00000082] mb-[2rem]"
+            className="text-lg md:text-2xl  text-[#00000082]   mb-[2rem]"
           >
             Overview
           </h1>
