@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect } from "react";
 import "../assets/css/homepage.css";
-import { getDataPlayer } from "../service/getDataPlayer";
+import { getDataPlayer } from "../Service/getDataPlayer";
 
 // Deffine  Data Varible
 interface Data {
