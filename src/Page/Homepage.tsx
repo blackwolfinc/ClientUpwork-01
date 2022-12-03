@@ -36,7 +36,7 @@ export const Homepage = () => {
     // Define Data and handler when it Blank
     const dataHandle = DataPlayer ? DataPlayer : [];
     // asc Filter
-    if (Filter == true) {
+    if (Filter === true) {
       const strAscending = [...dataHandle].sort((a: Data, b: Data) =>
         a.realName > b.realName ? 1 : -1
       );
@@ -99,7 +99,7 @@ export const Homepage = () => {
 
           <div className="space-y-2 md:mt-[2rem] text-[#00000082] text-lg">
             {/* when Not selected yet any card will be become ""Pick a card  */}
-            {DataPlayerSelected == undefined ? (
+            {DataPlayerSelected === undefined ? (
               <h1>Pick a card </h1>
             ) : (
               <>
