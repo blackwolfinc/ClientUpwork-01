@@ -57,9 +57,9 @@ export const Homepage = () => {
       return (
         <div
           className={` ${
-            // if index same as DataSelected The border will be turn green
+            // if index same as DataSelected The border will be turn gray
             DataIndexSelected == i
-              ? "border-[2px] border-[#1fb057] scale-105"
+              ? "border-[2px] border-[#4A4A4A]/40 scale-105"
               : ""
           } bg-[#ffffff] tag  m-[1rem] w-[8rem] md:w-3/12 p-[1rem]  
            min-h-[9rem] justify-center items-start flex flex-col rounded-md shadow-2xl text-[#00000082]  
