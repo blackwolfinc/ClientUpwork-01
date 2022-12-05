@@ -15,6 +15,7 @@ export const Homepage = () => {
   const [DataPlayer, setDataPlayer] = React.useState([]);
   const [DataPlayerSelected, setDataPlayerSelected] = React.useState<Data>();
   const [Filter, setFilter] = React.useState<boolean>(true);
+  const [DataIndexSelected, setDataIndexSelected] = React.useState(1);
 
   // Function for asynchronously
   const getDataFormApi = async () => {
@@ -55,12 +56,18 @@ export const Homepage = () => {
     return DataPlayer?.map((value: Data, i) => {
       return (
         <div
-          className=" bg-[#ffffff] tag  m-[1rem] w-[8rem] md:w-3/12 p-[1rem]  
+          className={` ${
+            // if index same as DataSelected The border will be turn green
+            DataIndexSelected == i
+              ? "border-[2px] border-[#1fb057] scale-105"
+              : ""
+          } bg-[#ffffff] tag  m-[1rem] w-[8rem] md:w-3/12 p-[1rem]  
            min-h-[9rem] justify-center items-start flex flex-col rounded-md shadow-2xl text-[#00000082]  
-           hover:scale-[1.05] hover:cursor-pointer duration-200"
+           hover:scale-[1.05] hover:cursor-pointer duration-200`}
           key={i}
           onClick={() => {
             // Set Data Player Active
+            setDataIndexSelected(i);
             setDataPlayerSelected(value);
           }}
         >
@@ -127,6 +134,8 @@ export const Homepage = () => {
               id="Asc"
               onClick={() => {
                 // set Filter ASC true
+                setDataPlayerSelected(undefined);
+                setDataIndexSelected(null);
                 setFilter(true);
               }}
               className="bg-[#ffffff] border-[#4A4A4A]/40 border-[2px] text-md  w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
@@ -137,6 +146,8 @@ export const Homepage = () => {
               id="Desc"
               onClick={() => {
                 // set Filter ASC true
+                setDataPlayerSelected(undefined);
+                setDataIndexSelected(null);
                 setFilter(false);
               }}
               className="bg-[#ffffff] border-[#4A4A4A]/40 border-[2px] text-md     w-full  py-4 rounded-md hover:scale-[1.01] hover:cursor-pointer duration-300 hover:shadow-xl"
