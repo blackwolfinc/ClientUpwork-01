@@ -15,7 +15,7 @@ export const Homepage = () => {
   const [DataPlayer, setDataPlayer] = React.useState([]);
   const [DataPlayerSelected, setDataPlayerSelected] = React.useState<Data>();
   const [Filter, setFilter] = React.useState<boolean>(true);
-  const [DataIndexSelected, setDataIndexSelected] = React.useState(1);
+  const [DataIndexSelected, setDataIndexSelected] = React.useState(null);
 
   // Function for asynchronously
   const getDataFormApi = async () => {
